@@ -1,3 +1,0 @@
-GET /login?username=admin&password=admin&get_button=GET+Login HTTP/1.1
-
-username=admin&password=pass&get_button=GET+Login
