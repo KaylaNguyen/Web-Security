@@ -1,0 +1,10 @@
+{% autoescape true %}
+<h2>Good</h2>
+<p>
+    Hello {{ name }}! I don't trust your input. I escaped it, just in case.
+</p>
+{% endautoescape %}
+<h2>Bad</h2>
+<p>
+    I trust all data! How are you {{ name}}?
+</p>
