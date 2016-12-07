@@ -1,0 +1,28 @@
+<!doctype html>
+<title>Purrfection</title>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+<div class="page">
+    <h1>Purrfection - Cat Lovers Blog</h1>
+    <h3>Today's question</h3>
+    Why does my cat run around and knock things over at 3am???<br/><br/></h3>
+    <video data-mp4_url="https://img.buzzfeed.com/buzzfeed-static/static/2015-08/27/6/enhanced/webdr06/anigif_enhanced-21585-1440670840-2.gif?output-format=mp4"
+           data-status="loaded"
+           poster="https://img.buzzfeed.com/buzzfeed-static/static/2015-08/27/6/enhanced/webdr06/anigif_enhanced-21585-1440670840-2_preview.gif"
+           class="bf_dom js-progload-mp4-gif" width=70% height=25% loop="" autoplay=""
+           src="https://img.buzzfeed.com/buzzfeed-static/static/2015-08/27/6/enhanced/webdr06/anigif_enhanced-21585-1440670840-2.gif?output-format=mp4"
+           data-inview-id="1">
+        <source type="video/mp4"
+                src="https://img.buzzfeed.com/buzzfeed-static/static/2015-08/27/6/enhanced/webdr06/anigif_enhanced-21585-1440670840-2.gif?output-format=mp4">
+    </video>
+    <div class="metanav">
+        {% if not session.logged_in %}
+            <a href="{{ url_for('login') }}">log in</a>
+        {% else %}
+            <a href="{{ url_for('logout') }}">log out</a>
+        {% endif %}
+    </div>
+    {% for message in get_flashed_messages() %}
+        <div class="flash">{{ message }}</div>
+    {% endfor %}
+    {% block body %}{% endblock %}
+</div>

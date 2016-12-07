@@ -15,7 +15,7 @@ def hello_ssti():
 
 
 # TODO
-# 127.0.0.1:5000/protected?name=Batman. <script>alert("Full protection not yet achieved.")</script>
+# 127.0.0.1:5000/protected?name=Batman.<script>alert("Hi")</script>
 @app.route('/protected')
 def hello_protected():
     person = {'name': "world", 'secret': "Potato is still cool"}
