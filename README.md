@@ -7,4 +7,5 @@ Explore how to protect website from insecurities
     - simple-login does not. Anyone can view /home/<name>
 - Folder Flask-Template-Injection re-produce insecurities in [Injecting Flask](https://nvisium.com/blog/2015/12/07/injecting-flask/)
 - Folder Blog consists of a minimal blog that have a harmful link that posts on behalf of the user who clicks the link
-![alt](https://raw.githubusercontent.com/KaylaNguyen/Web-Security/1cfe457f4b3c40b99b8d8e08840c5869982ac92c/Blog/ScreenShot.png)
+
+<img src="https://raw.githubusercontent.com/KaylaNguyen/Web-Security/1cfe457f4b3c40b99b8d8e08840c5869982ac92c/Blog/ScreenShot.png" alt="Image" width="50%" height="50%"/>
