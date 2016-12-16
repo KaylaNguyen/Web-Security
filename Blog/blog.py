@@ -22,7 +22,9 @@ class User(UserMixin):
     # proxy for a database of users
     user_database = {"admin": ("admin", "pass"),
                      "Kayla": ("Kayla", "2001"),
-                     "Phil": ("Phil", "theawesome")}
+                     "Mallory": ("Mallory", "mallory"),
+                     "Alice": ("Alice", "alice"),
+                     "Bob": ("Bob", "bob"),}
 
     def __init__(self, username, password):
         self.id = username
@@ -122,8 +124,8 @@ def show_entries():
 def add_entry():
     if not session.get('logged_in'):
         abort(401)
+
     db = get_db()
-    # TODO get logged in user
     db.execute('INSERT INTO entries (title, text, author) VALUES (?, ?, ?)',
                [request.form['title'], request.form['text'], session['current_user'][0]])
     db.commit()
